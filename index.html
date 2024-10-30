@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
+</head>
+<body align="center">
+    <h1>Trivia Game</h1>
+    <div id="setup" class="setup">
+        <div class="players">
+            <input type="text" id="player1" placeholder="Player 1 Name" />
+            <input type="text" id="player2" placeholder="Player 2 Name" />
+        </div>
+        <button type="submit" onclick="startGame()">Start Game</button>
+    </div>
+    <div id="category-selection" class="category-selection" style="display:none;">
+        <label for="category">Choose Category:</label>
+        <select id="category"></select>
+        <button type="submit" onclick="chooseCategory()">Select Category</button>
+    </div>
+    <div id="question-display" class="question-display" style="display:none;">
+        <div class="scores" id="scores">
+            <div id="player1-score">Player 1 Score: 0</div>
+            <div id="player2-score">Player 2 Score: 0</div>
+        </div>        
+        <p class="question-text" id="question-text"></p>
+        <div id="answers" class="answers"></div>
+    </div>
+    <div id="end-game" class="end-game" style="display:none;">
+        <p id="winner"></p>
+        <button type="submit" onclick="startNewRound()">Choose New Category</button>
+        <button type="submit" onclick="endGame()">End Game</button>
+        <button type="submit" onclick="playAgain()">Play Again</button>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
