@@ -4,7 +4,6 @@
     font-family: "Inria Sans", serif;
     background-color: black;
     font-size: 20px;
-    color: aliceblue;
 }
 body{
     height: 100%;
@@ -54,6 +53,7 @@ select{
     display: flex;
     justify-content: space-evenly;
     margin: 20px;
+    color: aliceblue;
 }
 .question-display{
     text-align: center;
